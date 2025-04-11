@@ -249,7 +249,7 @@ function App() {
               </Row>
               <Row className="d-sm-none px-0">
                 <Col>
-                 //* <span className="build">Build version: {buildVersion.substring(0, 8)}</span>
+                 <span className="build">Build version: {buildVersion.substring(0, 8)}</span>
                 </Col>
               </Row>
             </Container>
