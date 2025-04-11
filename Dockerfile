@@ -1,6 +1,6 @@
 FROM node:14
 
-WORKDIR /root/kobra-explorer
+WORKDIR /root/koda-explorer
 
 COPY . .
 
