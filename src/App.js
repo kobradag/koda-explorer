@@ -30,7 +30,7 @@ import { apiAddress } from "./addresses";
 // moment.locale(locale);
 // moment.locale('en');
 
-const buildVersion = process.env.REACT_APP_VERCEL_GIT_COMMIT_SHA || "1.0.2"
+const buildVersion = process.env.REACT_APP_VERCEL_GIT_COMMIT_SHA || "1.0.0"
 
 document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener('scroll', function () {
@@ -214,10 +214,10 @@ function App() {
                   Made with <font className="fs-5" color="red">♥</font> by Kaspa and Kobradag developers
                   <span className="ms-3">
                     <OverlayTrigger placement="left" overlay={<Tooltip id="github">Source code</Tooltip>}>
-                      <a className="blockinfo-link" href="https://github.com/kobradag/kobra-explorer" target="_blank"><FaGithub size="1.3rem" /></a>
+                      <a className="blockinfo-link" href="https://github.com/kobradag/koda-explorer" target="_blank"><FaGithub size="1.3rem" /></a>
                     </OverlayTrigger>
                     <OverlayTrigger placement="right" overlay={<Tooltip id="donate">Donation address</Tooltip>}>
-                      <Link className="blockinfo-link ms-3" to="/addresses/kobra:qql0qdtl7q2kypx69lp72hc2fas46x22enqsfvfpw7g34l5uyz5264xjnfqdx"><BiDonateHeart size="1.3rem" /></Link>
+                      <Link className="blockinfo-link ms-3" to="/addresses/kobra:qpscc6kzu2ny8ga7tr72csftgxjnmzc0658355tgs9k45qpn0vm0qzlfenraj"><BiDonateHeart size="1.3rem" /></Link>
                     </OverlayTrigger>
                     <OverlayTrigger placement="right" overlay={<Tooltip id="github">REST-API server</Tooltip>}>
                       <a className="blockinfo-link ms-3" href={`https://api.k0bradag.com/`} target="_blank"><SiFastapi size="1.3rem" /></a>
@@ -236,10 +236,10 @@ function App() {
                 <Col>
                   <span className="ms-2">
                     <OverlayTrigger placement="left" overlay={<Tooltip id="github">Source code</Tooltip>}>
-                      <a className="blockinfo-link" href="https://github.com/kobradag/kobra-explorer" target="_blank"><FaGithub size="1.1rem" /></a>
+                      <a className="blockinfo-link" href="https://github.com/kobradag/koda-explorer" target="_blank"><FaGithub size="1.1rem" /></a>
                     </OverlayTrigger>
                     <OverlayTrigger placement="right" overlay={<Tooltip id="donate">Donation address</Tooltip>}>
-                      <Link className="blockinfo-link ms-2" to="/addresses/kobra:qql0qdtl7q2kypx69lp72hc2fas46x22enqsfvfpw7g34l5uyz5264xjnfqdx"><BiDonateHeart size="1.1rem" /></Link>
+                      <Link className="blockinfo-link ms-2" to="/addresses/kobra:qpscc6kzu2ny8ga7tr72csftgxjnmzc0658355tgs9k45qpn0vm0qzlfenraj"><BiDonateHeart size="1.1rem" /></Link>
                     </OverlayTrigger>
                     <OverlayTrigger placement="right" overlay={<Tooltip id="github">REST-API server</Tooltip>}>
                       <a className="blockinfo-link ms-2" href={`https://api.k0bradag.com/`} target="_blank"><SiFastapi size="1.1rem" /></a>
