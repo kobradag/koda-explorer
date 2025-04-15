@@ -89,17 +89,21 @@ function App() {
     e.target.searchbox.value = ""
   }
 
- const updatePrice = () => {
-  fetch(`https://api.xeggex.com/api/v2/ASSET/GETBYID/666b539d530d4ea3f1fee0f5`, {
-    headers: { "Cache-Control": "no-cache" }
-  })
-    .then(response => response.json())
-    .then(data => {
-      setPrice(parseFloat(data['usdValue']).toFixed(4)); 
-      setMarketData(data); 
-    })
-    .catch(r => console.log(r));
-};
+    const updatePrice = () => {
+        fetch(`${API_SERVER}/info/market-data`, {
+            headers: {"Cache-Control": "no-cache"}
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (process.env.REACT_APP_NETWORK?.startsWith("testnet")) {
+                    setPrice(0)
+                } else {
+                    setPrice(data['current_price']['usd'].toFixed(4));
+                }
+                setMarketData(data);
+            })
+            .catch(r => console.log(r))
+    }
 
   useEffect(() => {
     updatePrice()
